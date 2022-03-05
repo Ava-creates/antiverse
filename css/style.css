@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 /* CSS RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,6 +48,30 @@ table {
 
 
 body{
+    height: 800%;
+    width:1000px;
     background-color: black;
 }
->>>>>>> Stashed changes
+
+#panel-1
+{
+    height: 100vh;
+}
+
+#panel-2
+{
+    background-image: url("https://video-images.vice.com/articles/5cb83afbd6eca400076d07ab/lede/1555580884814-shutterstock_1240127368.jpeg?crop=1xw:0.87890625xh;center,center&resize=1200:*");
+    width:100vw;
+    height: 100vh;
+    min-height: 900px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+#ship
+{
+    position: relative;
+
+}
