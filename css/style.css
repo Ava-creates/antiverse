@@ -44,14 +44,60 @@ table {
 }
 /* END of CSS Reset */
 
+@font-face {
+    font-family: "Hermes";
+    src: url("font/Hermes-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "ZingRust";
+    src: url("font/zing.rust-demo-base.otf") format("opentype");
+}
 
 body{
 
     height: 800vh;
-    width:1000px;
+    width:100vw;
     background-color: black;
+    color: white;
 }
 
+.zoom
+{
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+    position: relative;
+}
+
+.zoom img{
+    margin-top: 0%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.main-text{
+    font-family: ZingRust;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.main-text h2{
+    font-family: Hermes;
+    font-size: 16px;
+    /* text-transform: uppercase; */
+}
+
+.main-text p{
+    font-family: ZingRust;
+    font-size: 16px;
+    line-height: 35px;
+}
+/*
 #panel-1
 {
     height: 100vh;
@@ -61,8 +107,12 @@ body{
     z-index: 9999px;
 }
 
+*/
+
+
 #panel-2
 {
+    top:100vh;
     width:100vw;
     height: 100vh;
     min-height: 900px;
@@ -80,10 +130,7 @@ body{
 
 #ship2
 {
-
     position: relative;
-
-
 }
 
 #ship
@@ -92,7 +139,7 @@ body{
 }
 #earth-2
 {
-    position: relative;
+    position: absolute;
     top:20vh;
     left:30vw;
 
