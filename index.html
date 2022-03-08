@@ -26,9 +26,29 @@
   
   <body>
 
-
+    <center><h1 id="title">AlterLife</h1></center>
     <div id="panel-1">
-        zooming in 
+        <div class="zoom">
+            <img src="./worm.gif">
+        </div>
+        <div class="main-text">
+            <h2>ALterLife</h2>
+            <h3>Jounrey to the Parallel Universe</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta obcaecati earum nulla minima laboriosam ad, quasi consectetur eveniet placeat. Odio quasi incidunt repellendus iste laborum veritatis corporis eaque doloremque obcaecati?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta obcaecati earum nulla minima laboriosam ad, quasi consectetur eveniet placeat. Odio quasi incidunt repellendus iste laborum veritatis corporis eaque doloremque obcaecati?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta obcaecati earum nulla minima laboriosam ad, quasi consectetur eveniet placeat. Odio quasi incidunt repellendus iste laborum veritatis corporis eaque doloremque obcaecati?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta obcaecati earum nulla minima laboriosam ad, quasi consectetur eveniet placeat. Odio quasi incidunt repellendus iste laborum veritatis corporis eaque doloremque obcaecati?</p>
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                $(".zoom img").css({
+                    width: (100+scroll/5)+"%"
+                });
+            });
+        </script>
     </div>
 
     <div id="splash">
@@ -44,9 +64,10 @@
 
             <img src="ship.png" alt="img">
         </div>
-        <div id="earth-1">
+       
+        <!-- <div id="earth-1">
             <img src="flat.png">
-        </div>
+        </div> -->
         
     </div>
 
