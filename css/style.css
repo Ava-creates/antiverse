@@ -80,10 +80,7 @@ body{
 
 #ship2
 {
-
     position: relative;
-
-
 }
 
 #ship
@@ -92,7 +89,7 @@ body{
 }
 #earth-2
 {
-    position: relative;
+    position: absolute;
     top:20vh;
     left:30vw;
 
