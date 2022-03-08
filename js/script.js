@@ -1,3 +1,75 @@
+let scrollPositionY = 0;
+
+
+var panel1_sound = new Howl({
+    src: ['../audio/cornField.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var failure_sound = new Howl({
+    src: ['../audio/failure.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel2_sound = new Howl({
+    src: ['../audio/mountains.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel3_sound = new Howl({
+    src: ['../audio/stay.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel4_sound = new Howl({
+    src: ['../audio/cornField.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel5_sound = new Howl({
+    src: ['../audio/caution.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel6_sound = new Howl({
+    src: ['../audio/suspenseWormhole.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+//   howler js
+// var id1 = sound.play();
+// Fade out the first sound and speed up the second.
+//sound.fade(1, 0, 1000, id1);
+//sound.rate(1.5, id2);
+
 const flightPath = {
     curviness: 0.2,
     autoRotate: true,
@@ -22,6 +94,12 @@ tween.add(
 );
 
 const Controller = new ScrollMagic.Controller();
+
+window.addEventListener("scroll", (evt)=>{
+    scrollPositionY = window.scrollY;
+    console.log("scroll position Y: ", scrollPositionY);
+})
+
 
 const scene = new ScrollMagic.Scene({
     triggerElement: "#panel-3",
