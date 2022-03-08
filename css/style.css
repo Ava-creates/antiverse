@@ -110,6 +110,7 @@ body{
     background-color: white;
     
     color: red;
+    z-index: 9999;
 
 }
 
@@ -120,5 +121,4 @@ body{
     height: 100vh;
     width: 100vw;
     background-color: white;
-    visibility: hidden;
 }
