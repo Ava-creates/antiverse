@@ -1,3 +1,5 @@
+/*for rocket crashing in  panel -3 */
+
 const flightPath = {
     curviness: 0.5,
     autoRotate: true,
@@ -19,27 +21,6 @@ const flightPath = {
        {x:400, y:-700},
        
     ]
-}
-
-
-var texts=["the earthhhhhh", "it it is flattttt", "aaaaaa"];
-
-
-var d= 0;
-
-if(d<25)
-{
-    $(".texts").text(texts[0])
-}
-
-else if( d>25 && d<50 )
-{
-    $(".texts").text(texts[1])
-}
-
-else
-{
-    $(".texts").text(texts[0])
 }
 
 
@@ -66,6 +47,32 @@ const scene = new ScrollMagic.Scene({
     .setPin('#panel-3')
     .addTo(Controller);
 
+
+/* for displaying text in panel 3 */
+
+var texts=["the earthhhhhh", "it it is flattttt", "aaaaaa"];
+
+
+var d= 0;
+
+if(d<25)
+{
+    $(".texts").text(texts[0])
+}
+
+else if( d>25 && d<50 )
+{
+    $(".texts").text(texts[1])
+}
+
+else
+{
+    $(".texts").text(texts[0])
+}
+
+
+
+/* for the white screen flash between panel -2 and panel -3  */
 
 var Y = document.getElementById("panel-2")
 
