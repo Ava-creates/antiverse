@@ -1,4 +1,11 @@
 
+// 
+let panel6img = document.getElementById("panel6img");
+
+let panel7img = document.getElementById("panel7img");
+
+let isPlaying = false;
+
 // audio assests
 
 let audioInit = document.getElementById("audioInit");
@@ -210,7 +217,7 @@ window.addEventListener("click", function(evt){
     if(scrollPositionY>=0 && scrollPositionY<=813){
         stopAllAudio();
        p1sound =  panel1_sound.play();
-       console.log(p1sound);
+      
 
     } else if(scrollPositionY>813 && scrollPositionY<=6037){
         // Fade out the first sound and speed up the second.
@@ -245,3 +252,34 @@ let stopAllAudio = function(){
 
    // Change global volume.
 //Howler.volume(0.5);
+
+// AOS animations
+
+//Script JS
+$(".myGrid div").each(function(index, element){
+    element = $(element);
+    index += 1;
+    element.css("grid-row", index);
+  
+    if(index == 1){
+      element.attr("data-aos", "fade-left");
+    }
+    else {
+      element.attr("data-aos", "fade-right");
+    }
+  
+  });
+  
+  //Initializing the animation on scroll library
+  AOS.init();
+
+  // initializing the parallax animation
+  new simpleParallax(panel6img, {
+    delay: 5.6,
+	orientation: 'right',
+});
+
+new simpleParallax(panel7img, {
+    delay: 5.6,
+	orientation: 'left',
+});
