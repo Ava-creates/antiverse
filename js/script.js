@@ -1,6 +1,8 @@
 
 // audio assests
 
+let audioInit = document.getElementById("audioInit");
+
 var panel1_sound = new Howl({
     src: ['../audio/cornField.mp3'],
     loop: false,
@@ -13,7 +15,7 @@ var panel1_sound = new Howl({
   var failure_sound = new Howl({
     src: ['../audio/failure.mp3'],
     loop: false,
-    volume: 0.5,
+    volume: 0.4,
     onend: function() {
       console.log('Finished!');
     }
@@ -63,7 +65,6 @@ var panel1_sound = new Howl({
       console.log('Finished!');
     }
   });
-
   // end of audio 
 
 
@@ -171,7 +172,6 @@ window.addEventListener("scroll", (evt)=>{
 
         
     }
-
     else 
     {
         
@@ -183,7 +183,6 @@ window.addEventListener("scroll", (evt)=>{
     {
         if(scrollPositionY<7500)
         {
-
           
             $("#ship2").css("top","37rem");
             $("#ship2").css("left","26rem");
@@ -198,10 +197,51 @@ window.addEventListener("scroll", (evt)=>{
         $("#ship2").css("top","5rem");
         $("#ship2").css("left","6rem");
     }
+
     
+     
 
 })
 
+// playing the audio 
+window.addEventListener("click", function(evt){
+    // evt.preventDefault();
+    var p1sound;
+    if(scrollPositionY>=0 && scrollPositionY<=813){
+        stopAllAudio();
+       p1sound =  panel1_sound.play();
+       console.log(p1sound);
 
+    } else if(scrollPositionY>813 && scrollPositionY<=6037){
+        // Fade out the first sound and speed up the second.
+        // panel2_sound.stop();
+        // panel1_sound.stop();
+        stopAllAudio();
+        panel3_sound.play();
 
-   
+    } else if (scrollPositionY>=7032 && scrollPositionY<=7900){
+        stopAllAudio();
+        failure_sound.play();
+    } else if(scrollPositionY>7900 && scrollPositionY<=8700){
+        stopAllAudio();
+        panel4_sound.play();
+        
+    }else if(scrollPositionY>900 && scrollPositionY<=10705){
+        stopAllAudio();
+        panel5_sound.play();
+    }
+
+})
+
+let stopAllAudio = function(){
+    panel1_sound.stop();
+    panel2_sound.stop();
+    panel3_sound.stop();
+    panel4_sound.stop();
+    panel5_sound.stop();
+    panel6_sound.stop();
+    failure_sound.stop();
+}
+
+   // Change global volume.
+//Howler.volume(0.5);
