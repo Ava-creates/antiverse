@@ -1,46 +1,56 @@
+@font-face {
+    font-family: "ZingRust";
+    src: url("fonts/zing.rust-demo-base.otf") format("opentype");
+}
+
 *{
-    margin: 0;
+    font-family: ZingRust;
+    border: 0;
     padding: 0;
+    margin: 0;
 }
 
-body{
+div{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: big john;
+    width: 100%;
     height: 100vh;
+}
+
+h2{
+    font-size: 60px;
+    background-color: lightgray;
+    padding: 8px 24px;
+    border-radius: 16px;
+}
+
+div:nth-child(1){
+    background-image: url(2.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* div:nth-child(2){
     background-color: black;
+} */
+
+div:nth-child(2){
+    height: 600px;
+    background-image: url(1.png);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-img{
-    width: 80%;
-    border: 10px solid whitesmoke;
-    box-shadow: 3px 4px 30px gray;
-}
+/* div:nth-child(3){
+    background-color: black;
+} */
 
-img:hover{
-    animation: shaking 0.5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes shaking {
-    0%{transform: translate(1px, 1px ) rotate(0deg);}
-    10%{transform: translate(-1px, -2px ) rotate(-1deg);}
-    20%{transform: translate(-3px, 0px ) rotate(1deg);}
-    30%{transform: translate(3px, 2px ) rotate(0deg);}
-    40%{transform: translate(1px, -1px ) rotate(-1deg);}
-    50%{transform: translate(-1px, 2px ) rotate(0deg);}
-    60%{transform: translate(-3px, 1px ) rotate(-1deg);}
-    70%{transform: translate(3px, 1px ) rotate(0deg);}
-    80%{transform: translate(-1px, -1px ) rotate(-1deg);}
-    90%{transform: translate(1px, 2px ) rotate(0deg);}
-    100%{transform: translate(1px, -2px ) rotate(-1deg);}
-}
-
-.blink-bg{
-    animation: blinkingBackground 2s infinite;
-}
-@keyframes blinkingBackground{
-    0%		{ background-color: black;}
-    50%		{ background-color: #d21404;}
-    100%	{ background-color: black;}
+div:nth-child(3){
+    /* height: 400px; */
+    background-image: url(3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
