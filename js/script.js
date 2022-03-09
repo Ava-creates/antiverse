@@ -43,7 +43,7 @@ const scene = new ScrollMagic.Scene({
     triggerHook: 0
 })
     .setTween(tween)
-    .addIndicators()
+   /* .addIndicators()*/
     .setPin('#panel-2')
     .addTo(Controller);
 
