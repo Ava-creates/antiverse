@@ -1,3 +1,14 @@
+
+@font-face {
+    font-family: "Hermes";
+    src: url("font/Hermes-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "ZingRust";
+    src: url("font/zing.rust-demo-base.otf") format("opentype");
+}
+
 /* CSS RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -44,15 +55,6 @@ table {
 }
 /* END of CSS Reset */
 
-@font-face {
-    font-family: "Hermes";
-    src: url("font/Hermes-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "ZingRust";
-    src: url("font/zing.rust-demo-base.otf") format("opentype");
-}
 
 body{
 
@@ -112,60 +114,92 @@ body{
 
 #panel-2
 {
-    top:100vh;
+    display: block;
+    
     width:100vw;
     height: 100vh;
     min-height: 900px;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 #panel-3
+{
+    display: block;
+    background-color: blue;
+    width:100vw;
+    height: 100vh;
+    
+}
+#panel-4
 {
     width:100vw;
     height: 100vh;
     min-height: 900px;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 #ship2
 {
     position: relative;
+    top: 5rem;
+    left: 6rem;
+ 
+    transition: top 10s, left 6s;
+ 
+
 }
 
 #ship
 {
-    position: relative;
+    position:  relative;
+    top:-40px;
+
+
 }
+
+#pop2
+{
+    position: relative;
+    top: 50px;
+    left: 40px;
+    bottom: 50px;
+
+    visibility: hidden;
+}
+
+#pop3
+{
+    position: relative;
+    top: -30rem;
+    left:20rem;
+    visibility: hidden;
+}
+
+
+#pop1
+{
+    position: relative;
+    top: -30rem;
+    left:20rem;
+    visibility: hidden;
+}
+
+
 #earth-2
 {
-    position: absolute;
-    top:20vh;
-    left:30vw;
+    position: relative;
+    left:20rem;
+    top: 10rem;
 
 }
 
-#earth-1
+#earth
 {
-    position: absolute;
-    top:20vh;
-    left:30vw;
-}
-
-.texts
-{
-    background-color: white;
+    position:absolute;
+    left:20rem;
+    top: 15rem;
     
-    color: red;
-    z-index: 9999;
-
-}
-
-
-#splash
-{
-    display: none;
-    height: 100vh;
-    width: 100vw;
-    background-color: white;
 }
