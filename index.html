@@ -4,88 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js" integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js" integrity="sha512-/8phkpsAzxsbuX18zNkQ2gCq4Q5JsWoPo1jHLDeZorPUHRtx9YJxpdk+os05oDhPJVCNzA2/NMl4rmJyQ+6Fvg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js" integrity="sha512-I0VFyPo7hdM7YrEbQ0pvX4bX2904k0+B19u/xBrPrQoMprfcSnIDfGFD8kP52GbAhwtDjkEVhXlQvj8+vkJyew==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js" integrity="sha512-ht40uOoiTef4nKq0THVzjIGh3VS108J577LVVgNXnQLXza3doXjoM3owin2vd+Hm6w88k12RIrePIVY2WNzz6Q==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/BezierPlugin.min.js" integrity="sha512-oOy5+mtZRcqjn6b9k4oj+tk2/hVIetzOAM9Y5cndEHgLxiIGavAz1agbHf6JjGzxXZ2SMbu08Uy1DDF0UwA0qQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"
+        integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+        integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"
+        integrity="sha512-/8phkpsAzxsbuX18zNkQ2gCq4Q5JsWoPo1jHLDeZorPUHRtx9YJxpdk+os05oDhPJVCNzA2/NMl4rmJyQ+6Fvg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"
+        integrity="sha512-I0VFyPo7hdM7YrEbQ0pvX4bX2904k0+B19u/xBrPrQoMprfcSnIDfGFD8kP52GbAhwtDjkEVhXlQvj8+vkJyew=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"
+        integrity="sha512-ht40uOoiTef4nKq0THVzjIGh3VS108J577LVVgNXnQLXza3doXjoM3owin2vd+Hm6w88k12RIrePIVY2WNzz6Q=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/BezierPlugin.min.js"
+        integrity="sha512-oOy5+mtZRcqjn6b9k4oj+tk2/hVIetzOAM9Y5cndEHgLxiIGavAz1agbHf6JjGzxXZ2SMbu08Uy1DDF0UwA0qQ=="
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="js/script.js"    defer ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+        integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/script.js" defer></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Antiverse</title>
+    <title>ALterLife</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <html lang="en">
-    <title>ANTIVERSE</title>
-      
-  </head>
+    <title>AlterLife</title>
 
-  
-  <body>
+</head>
 
-        <center><h1 id="title">AlterLife</h1></center>
+
+<body>
+
+    <center>
+        <h1 id="title">
+            <a id="audioInit" href="">AlterLife</a>
+        </h1>
+    </center>
 
     <div id="panel-1">
         <div class="zoom">
             <img src="./worm.gif">
         </div>
         <div class="main-text">
-            <h2>ALterLife</h2>
-            <h3>Jounrey to the Parallel Universe</h3>
-            <p>Two friends frustated with their passport powers decide that no country on the Eartha that we know of is befitting to travel given the visa requirements</p>
+            <br>
+            <h2>Jounrey to the Parallel Universe</h2>
+
+            <p>Two friends frustated with their passport powers decide that no country on the Eartha that we know of is
+                befitting to travel given the visa requirements</p>
             <p>But the spring break is near so what to do?</p>
-            <p>They decide to embark on a quest in the space( How they managed to pull this of is something known to them only)</p>
+            <p>They decide to embark on a quest in the space( How they managed to pull this of is something known to
+                them only)</p>
             <p>Unfortunately, it seems they are not going to make it back for the rest of the semester or forever </p>
-            <p>As they get sucked in a black hole (it was bound to happen tho with them having no navigation skills AI can do only so much ) </p>
+            <p>As they get sucked in a black hole (it was bound to happen tho with them having no navigation skills AI
+                can do only so much ) </p>
         </div>
-    
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
-            
+
         </script>
     </div>
 
     <div id="splash">
-        
+
     </div>
     <div id="panel-2">
         <img src="popup2.png" id="pop2">
         <div id="ship">
-        <img src="ship.png" alt="img">
-       
-    
+            <img src="ship.png" alt="img">
+
+
         </div>
-       
-        
+
+
         <img src="popup3.png" id="pop3">
         <img src="popup1.png" id="pop1">
-        
-       
+
+
         <div id="earth">
             <img src="flat.png">
         </div>
         <!-- <div id="earth-1">
             <img src="flat.png">
         </div> -->
-        
+
     </div>
 
-    <div id=panel-3>
-        panel 
+    <div id=panel-3 class="blink-bg">
+        <img src="spaceship_cockpit.png" class="sound" id="ai">
     </div>
 
-    <div id= "panel-4">
+    <div id="panel-4">
         <div id="ship2">
             <img src="ship.png" alt="img">
         </div>
         <div id="earth-2">
             <img src="flat.png">
         </div>
-        
+
     </div>
+
+
+    <div id="panel-5">
+        <div>
+            <h3>SAFE LANDING! THE EMERGENCY AI CONTROLLER TOOK CONTROL.</h3>
+        </div>
+        <div>
+            <h2>... SURROUNDED BY SEA ...</h2>
+        </div>
+        <div>
+            <h2>CREW SAFEGUARD THEMSELVES IN PODS!</h2>
+        </div>
+    </div>
+
+    <div id="panel8" class="myGrid">
+        <!-- Grid panel-->
+        <div id="panel6">
+            <!--Space ship discovery panel-->
+            <img id="panel6img" src="images/panel6.png" alt="sleeping pods discovery">
+        </div>
+
+        <div id="panel7">
+            <!--Alternate confrontation-->
+            <img id="panel7img" src="images/panel7.png" alt="alter selves meeting">
+        </div>
+
     </div>
 </body>
 

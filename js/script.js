@@ -1,4 +1,81 @@
 
+// 
+let panel6img = document.getElementById("panel6img");
+
+let panel7img = document.getElementById("panel7img");
+
+let isPlaying = false;
+
+// audio assests
+
+let audioInit = document.getElementById("audioInit");
+
+var panel1_sound = new Howl({
+    src: ['../audio/cornField.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var failure_sound = new Howl({
+    src: ['../audio/failure.mp3'],
+    loop: false,
+    volume: 0.4,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel2_sound = new Howl({
+    src: ['../audio/mountains.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel3_sound = new Howl({
+    src: ['../audio/stay.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel4_sound = new Howl({
+    src: ['../audio/cornField.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel5_sound = new Howl({
+    src: ['../audio/caution.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel6_sound = new Howl({
+    src: ['../audio/suspenseWormhole.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+  // end of audio 
+
+
+
 $(window).scroll(function(){
     var scroll = $(window).scrollTop();
     $(".zoom img").css({
@@ -43,7 +120,7 @@ const scene = new ScrollMagic.Scene({
     triggerHook: 0
 })
     .setTween(tween)
-   /* .addIndicators()*/
+   /*ßß .addIndicators()*/
     .setPin('#panel-2')
     .addTo(Controller);
 
@@ -67,7 +144,7 @@ let scrollPositionY = 0;
 
 window.addEventListener("scroll", (evt)=>{
     scrollPositionY = window.scrollY;
-    console.log("scroll position Y: ", scrollPositionY);
+    
     if(scrollPositionY>800 && scrollPositionY<6000)
     {
         $("#ship").css("top","scrollPositionY");
@@ -81,7 +158,9 @@ window.addEventListener("scroll", (evt)=>{
         }
 
         if(3050<scrollPositionY && scrollPositionY<3900)
-        {$("#pop3").css("visibility","visible");}
+        {
+            $("#pop3").css("visibility","visible");
+        }
 
         else
         {
@@ -89,14 +168,17 @@ window.addEventListener("scroll", (evt)=>{
         }
 
         if(4500<scrollPositionY && scrollPositionY<5000)
-        {$("#pop1").css("visibility","visible");}
+        {
+            $("#pop1").css("visibility","visible");
+        }
 
         else
-       { ("#pop1").css("visibility","hidden");}
+       { 
+           $("#pop1").css("visibility","hidden");
+        }
 
         
     }
-
     else 
     {
         
@@ -108,10 +190,11 @@ window.addEventListener("scroll", (evt)=>{
     {
         if(scrollPositionY<7500)
         {
-
           
             $("#ship2").css("top","37rem");
-            $("#ship2").css("left","36rem");
+            $("#ship2").css("left","26rem");
+           
+
        
         }
     }
@@ -121,10 +204,82 @@ window.addEventListener("scroll", (evt)=>{
         $("#ship2").css("top","5rem");
         $("#ship2").css("left","6rem");
     }
+
     
+     
 
 })
 
+// playing the audio 
+window.addEventListener("click", function(evt){
+    // evt.preventDefault();
+    var p1sound;
+    if(scrollPositionY>=0 && scrollPositionY<=813){
+        stopAllAudio();
+       p1sound =  panel1_sound.play();
+      
 
+    } else if(scrollPositionY>813 && scrollPositionY<=6037){
+        // Fade out the first sound and speed up the second.
+        // panel2_sound.stop();
+        // panel1_sound.stop();
+        stopAllAudio();
+        panel3_sound.play();
 
-   
+    } else if (scrollPositionY>=7032 && scrollPositionY<=7900){
+        stopAllAudio();
+        failure_sound.play();
+    } else if(scrollPositionY>7900 && scrollPositionY<=8700){
+        stopAllAudio();
+        panel4_sound.play();
+        
+    }else if(scrollPositionY>900 && scrollPositionY<=10705){
+        stopAllAudio();
+        panel5_sound.play();
+    }
+
+})
+
+let stopAllAudio = function(){
+    panel1_sound.stop();
+    panel2_sound.stop();
+    panel3_sound.stop();
+    panel4_sound.stop();
+    panel5_sound.stop();
+    panel6_sound.stop();
+    failure_sound.stop();
+}
+
+   // Change global volume.
+//Howler.volume(0.5);
+
+// AOS animations
+
+//Script JS
+$(".myGrid div").each(function(index, element){
+    element = $(element);
+    index += 1;
+    element.css("grid-row", index);
+  
+    if(index == 1){
+      element.attr("data-aos", "fade-left");
+    }
+    else {
+      element.attr("data-aos", "fade-right");
+    }
+  
+  });
+  
+  //Initializing the animation on scroll library
+  AOS.init();
+
+  // initializing the parallax animation
+  new simpleParallax(panel6img, {
+    delay: 5.6,
+	orientation: 'right',
+});
+
+new simpleParallax(panel7img, {
+    delay: 5.6,
+	orientation: 'left',
+});
