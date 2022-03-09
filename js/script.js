@@ -43,7 +43,7 @@ const scene = new ScrollMagic.Scene({
     triggerHook: 0
 })
     .setTween(tween)
-   /* .addIndicators()*/
+   /*ßß .addIndicators()*/
     .setPin('#panel-2')
     .addTo(Controller);
 
@@ -81,7 +81,9 @@ window.addEventListener("scroll", (evt)=>{
         }
 
         if(3050<scrollPositionY && scrollPositionY<3900)
-        {$("#pop3").css("visibility","visible");}
+        {
+            $("#pop3").css("visibility","visible");
+        }
 
         else
         {
@@ -89,10 +91,14 @@ window.addEventListener("scroll", (evt)=>{
         }
 
         if(4500<scrollPositionY && scrollPositionY<5000)
-        {$("#pop1").css("visibility","visible");}
+        {
+            $("#pop1").css("visibility","visible");
+        }
 
         else
-       { ("#pop1").css("visibility","hidden");}
+       { 
+           ("#pop1").css("visibility","hidden");
+        }
 
         
     }
