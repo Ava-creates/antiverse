@@ -14,7 +14,7 @@ The theme of the story is openness - almost all the panels are without a frame, 
 The comic is supposed to be immersive; build with the hope of taking the readers on an interstellar adventure. 
 <br>
 
-For implementing the concept we used multiple animation techniques utilising CSS and various JavaScript libraries. These techniques depend on user scrolling leading to various panels aligned vertically as well as hovering over an image to get the sense of what's actually happening. 
+For implementing the concept we used multiple animation techniques utilising CSS and various JavaScript libraries. These techniques depend on user scrolling leading to various panels aligned vertically as well as hovering over an image to get the sense of what's actually happening. We divided our work equally into different panels and then combined all of them. Together, we did added sounds and did some finishing touches.
 <br>
 
 The final version is pretty close to what we imagined in the beginning. A few things took longer than expected while some needed fine-tuning. However, apart from that, we managed to implement everything we decided on our first meeting. It was a tough process though that made us learn so many new things.
