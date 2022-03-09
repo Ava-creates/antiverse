@@ -11,7 +11,7 @@ let isPlaying = false;
 let audioInit = document.getElementById("audioInit");
 
 var panel1_sound = new Howl({
-    src: ['../audio/cornField.mp3'],
+    src: ['https://github.com/Ava-creates/antiverse/tree/main/audio/cornField.mp3'],
     loop: false,
     volume: 0.5,
     onend: function() {
@@ -20,7 +20,7 @@ var panel1_sound = new Howl({
   });
 
   var failure_sound = new Howl({
-    src: ['../audio/failure.mp3'],
+    src: ['https://github.com/Ava-creates/antiverse/tree/main/audio/failure.mp3'],
     loop: false,
     volume: 0.4,
     onend: function() {
@@ -29,7 +29,7 @@ var panel1_sound = new Howl({
   });
 
   var panel2_sound = new Howl({
-    src: ['../audio/mountains.mp3'],
+    src: ['https://github.com/Ava-creates/antiverse/tree/main/audio/mountains.mp3'],
     loop: false,
     volume: 0.5,
     onend: function() {
@@ -38,7 +38,7 @@ var panel1_sound = new Howl({
   });
 
   var panel3_sound = new Howl({
-    src: ['../audio/stay.mp3'],
+    src: ['https://github.com/Ava-creates/antiverse/tree/main/audio/stay.mp3'],
     loop: false,
     volume: 0.5,
     onend: function() {
@@ -47,7 +47,7 @@ var panel1_sound = new Howl({
   });
 
   var panel4_sound = new Howl({
-    src: ['../audio/cornField.mp3'],
+    src: ['https://github.com/Ava-creates/antiverse/tree/main/audio/cornField.mp3'],
     loop: false,
     volume: 0.5,
     onend: function() {
@@ -56,7 +56,7 @@ var panel1_sound = new Howl({
   });
 
   var panel5_sound = new Howl({
-    src: ['../audio/caution.mp3'],
+    src: ['https://github.com/Ava-creates/antiverse/tree/main/audio/caution.mp3'],
     loop: false,
     volume: 0.5,
     onend: function() {
@@ -65,7 +65,7 @@ var panel1_sound = new Howl({
   });
 
   var panel6_sound = new Howl({
-    src: ['../audio/suspenseWormhole.mp3'],
+    src: ['https://github.com/Ava-creates/antiverse/tree/main/audio/suspenseWormhole.mp3'],
     loop: false,
     volume: 0.5,
     onend: function() {
@@ -144,7 +144,6 @@ let scrollPositionY = 0;
 
 window.addEventListener("scroll", (evt)=>{
     scrollPositionY = window.scrollY;
-    
     if(scrollPositionY>800 && scrollPositionY<6000)
     {
         $("#ship").css("top","scrollPositionY");
@@ -236,6 +235,9 @@ window.addEventListener("click", function(evt){
     }else if(scrollPositionY>900 && scrollPositionY<=10705){
         stopAllAudio();
         panel5_sound.play();
+    } else if(scrollPositionY>11280){
+        stopAllAudio();
+        panel6_sound.play();
     }
 
 })
