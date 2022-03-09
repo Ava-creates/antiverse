@@ -166,7 +166,7 @@ window.addEventListener("scroll", (evt)=>{
 
         else
        { 
-           ("#pop1").css("visibility","hidden");
+           $("#pop1").css("visibility","hidden");
         }
 
         
@@ -186,7 +186,9 @@ window.addEventListener("scroll", (evt)=>{
 
           
             $("#ship2").css("top","37rem");
-            $("#ship2").css("left","36rem");
+            $("#ship2").css("left","26rem");
+           
+
        
         }
     }

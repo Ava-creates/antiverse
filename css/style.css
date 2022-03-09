@@ -62,7 +62,7 @@ table {
     font-size: 60px;
 }
 body{
-
+    overflow-x: hidden;
     height: 800vh;
     width:100vw;
     background-color: black;
@@ -103,7 +103,7 @@ body{
 
 #panel-1
 {
-    background-image: url("../star.jpeg");
+    
     height: 100vh;
     width: 100vw;
     color: white;
@@ -119,7 +119,7 @@ body{
 #panel-2
 {
     display: block;
-    background-image: url("../star.jpeg");
+    background-image: url("../stars.png");
     width:100vw;
     height: 100vh;
     min-height: 900px;
@@ -141,6 +141,7 @@ body{
     width:100vw;
     height: 100vh;
     min-height: 900px;
+    background-image: url("../stars.png");
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -185,10 +186,12 @@ body{
 #ship2
 {
     position: relative;
-    top: 5rem;
-    left: 6rem;
+    top: 3rem;
+    left: 2rem;
+    transform: scale(.5, .75);
  
-    transition: top 10s, left 6s;
+    transition: top 5s, left 5s;
+   
  
 
 }
