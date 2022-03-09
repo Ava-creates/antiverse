@@ -144,7 +144,7 @@ let scrollPositionY = 0;
 
 window.addEventListener("scroll", (evt)=>{
     scrollPositionY = window.scrollY;
-    console.log("scroll position Y: ", scrollPositionY);
+    
     if(scrollPositionY>800 && scrollPositionY<6000)
     {
         $("#ship").css("top","scrollPositionY");
