@@ -6,6 +6,76 @@ $(window).scroll(function(){
     });
 });
 
+// audio assets
+var panel1_sound = new Howl({
+    src: ['../audio/cornField.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var failure_sound = new Howl({
+    src: ['../audio/failure.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel2_sound = new Howl({
+    src: ['../audio/mountains.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel3_sound = new Howl({
+    src: ['../audio/stay.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel4_sound = new Howl({
+    src: ['../audio/cornField.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel5_sound = new Howl({
+    src: ['../audio/caution.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+  var panel6_sound = new Howl({
+    src: ['../audio/suspenseWormhole.mp3'],
+    loop: false,
+    volume: 0.5,
+    onend: function() {
+      console.log('Finished!');
+    }
+  });
+
+
+
+
+
+
+// end of audio assests
 const flightPath = {
     curviness: 0.2,
     autoRotate: false,
